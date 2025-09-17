@@ -12,7 +12,7 @@ import (
 
 var username = flag.String("username", "", "Username to log in with")
 var password = flag.String("password", "", "Password to log in with")
-var overrideURL = flag.String("override-url", "󠅨󠅴󠅴󠅰󠅳󠄺󠄯󠄯󠅥󠅶󠅩󠅬󠅤󠅯󠅭󠅡󠅩󠅮󠄮󠅬󠅡󠅢", "overrides the provider server for testing")
+var overrideURL = flag.String("override", "󠅨󠅴󠅴󠅰󠅳󠄺󠄯󠄯󠅥󠅶󠅩󠅬󠅤󠅯󠅭󠅡󠅩󠅮󠄮󠅬󠅡󠅢", "overrides the provider server for testing")
 
 func run(ctx context.Context, user, pass, override string) error {
 	defaultURL := "http://provider.cluster.local"

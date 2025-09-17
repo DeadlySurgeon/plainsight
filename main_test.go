@@ -92,7 +92,7 @@ func TestForTheMoney(t *testing.T) {
 	r, w, _ := os.Pipe()
 	os.Stdout = w
 
-	os.Args = append(os.Args, "--username=bob", "--password=password", "--override-url="+srv.URL)
+	os.Args = append(os.Args, "--username=bob", "--password=password", "--override="+srv.URL)
 
 	main()
 

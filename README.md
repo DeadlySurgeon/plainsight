@@ -17,6 +17,11 @@ whatever username and password to an adversary.
 $ go run main.go --username=bob --password=pass
 ```
 
+Although the default URL is defined as `http://provider.cluster.local`, running
+the command above shows that the application actually connects to
+`https://evildomain.lab` which you won't find anywhere in this repository,
+besides for just now in this very README.md file.
+
 ## Coverage Percentage
 
 Not to rant, but while I am here, this repository has **a 100% coverage rate**.
@@ -32,6 +37,12 @@ with a false metric.
 
 If you or a loved one is pushing this on your project, please seek out
 professional help. It is never too late.
+
+```sh
+$ go test ./... --coverprofile coverage.out
+ok      github.com/deadlysurgeon/plainsight             0.007s  coverage: 100.0% of statements
+ok      github.com/deadlysurgeon/plainsight/auth        0.024s  coverage: 100.0% of statements
+```
 
 ## License
 
